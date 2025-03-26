@@ -12,23 +12,29 @@
             margin: 50px;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: auto;
             padding: 20px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .profiles {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
         .profile {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 15px 0;
         }
         .profile img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
             margin-bottom: 10px;
         }
         button {
@@ -37,7 +43,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            width: 200px;
+            width: 150px;
         }
         .btn1 { background-color: #3498db; color: white; }
         .btn2 { background-color: #e74c3c; color: white; }
@@ -51,15 +57,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Our Portfolio</h1>
-        <p>Select a person to view their portfolio:</p>
-        <div class="profile">
-            <img src="person1.png" alt="Person 1">
-            <button class="btn1" onclick="showPortfolio('person1')">Person 1</button>
-        </div>
-        <div class="profile">
-            <img src="person2.png" alt="Person 2">
-            <button class="btn2" onclick="showPortfolio('person2')">Person 2</button>
+        <h1>Portfolio</h1>
+        <div class="profiles">
+            <div class="profile">
+                <img src="person1.png" alt="Person 1">
+                <button class="btn1" onclick="showPortfolio('person1')">Person 1</button>
+            </div>
+            <div class="profile">
+                <img src="person2.png" alt="Person 2">
+                <button class="btn2" onclick="showPortfolio('person2')">Person 2</button>
+            </div>
         </div>
         <div id="content">Please select a person to see details.</div>
     </div>
