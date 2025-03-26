@@ -19,27 +19,28 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .profile img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
         button {
-            margin: 10px;
             padding: 10px;
             font-size: 16px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             width: 200px;
-            height: 50px;
         }
         .btn1 { background-color: #3498db; color: white; }
         .btn2 { background-color: #e74c3c; color: white; }
-        .btn-img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
         #content {
             margin-top: 20px;
             padding: 15px;
@@ -52,12 +53,14 @@
     <div class="container">
         <h1>Welcome to Our Portfolio</h1>
         <p>Select a person to view their portfolio:</p>
-        <button class="btn1" onclick="showPortfolio('person1')">
-            <img src="person1.png" alt="Person 1" class="btn-img"> Person 1
-        </button>
-        <button class="btn2" onclick="showPortfolio('person2')">
-            <img src="person2.png" alt="Person 2" class="btn-img"> Person 2
-        </button>
+        <div class="profile">
+            <img src="person1.png" alt="Person 1">
+            <button class="btn1" onclick="showPortfolio('person1')">Person 1</button>
+        </div>
+        <div class="profile">
+            <img src="person2.png" alt="Person 2">
+            <button class="btn2" onclick="showPortfolio('person2')">Person 2</button>
+        </div>
         <div id="content">Please select a person to see details.</div>
     </div>
 
