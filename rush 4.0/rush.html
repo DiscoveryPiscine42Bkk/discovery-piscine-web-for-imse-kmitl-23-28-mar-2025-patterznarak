@@ -21,14 +21,25 @@
         }
         button {
             margin: 10px;
-            padding: 10px 20px;
+            padding: 10px;
             font-size: 16px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 50px;
         }
         .btn1 { background-color: #3498db; color: white; }
         .btn2 { background-color: #e74c3c; color: white; }
+        .btn-img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
         #content {
             margin-top: 20px;
             padding: 15px;
@@ -41,8 +52,12 @@
     <div class="container">
         <h1>Welcome to Our Portfolio</h1>
         <p>Select a person to view their portfolio:</p>
-        <button class="btn1" onclick="showPortfolio('person1')">Person 1</button>
-        <button class="btn2" onclick="showPortfolio('person2')">Person 2</button>
+        <button class="btn1" onclick="showPortfolio('person1')">
+            <img src="person1.jpg" alt="Person 1" class="btn-img"> Person 1
+        </button>
+        <button class="btn2" onclick="showPortfolio('person2')">
+            <img src="person2.jpg" alt="Person 2" class="btn-img"> Person 2
+        </button>
         <div id="content">Please select a person to see details.</div>
     </div>
 
