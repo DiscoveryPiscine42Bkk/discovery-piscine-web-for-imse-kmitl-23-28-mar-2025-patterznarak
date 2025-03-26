@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn1 { background-color: #3498db; color: white; }
+        .btn2 { background-color: #e74c3c; color: white; }
+        #content {
+            margin-top: 20px;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Portfolio</h1>
+        <p>Select a person to view their portfolio:</p>
+        <button class="btn1" onclick="showPortfolio('person1')">Person 1</button>
+        <button class="btn2" onclick="showPortfolio('person2')">Person 2</button>
+        <div id="content">Please select a person to see details.</div>
+    </div>
+
+    <script>
+        function showPortfolio(person) {
+            let content = document.getElementById("content");
+            if (person === 'person1') {
+                content.innerHTML = "<h2>Person 1</h2><p>This is the portfolio of Person 1. Here you can see their work and achievements.</p>";
+            } else {
+                content.innerHTML = "<h2>Person 2</h2><p>This is the portfolio of Person 2. Here you can see their work and achievements.</p>";
+            }
+        }
+    </script>
+</body>
+</html>
